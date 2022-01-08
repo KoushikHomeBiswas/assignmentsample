@@ -2,8 +2,6 @@
 (function() {
   "use strict";
 
-  
-
 //Scroll to top
 var mybutton = document.getElementById("myBtn");
 window.onscroll = function() {scrollFunction()};
@@ -129,6 +127,20 @@ window.addEventListener('load', () => {
 });
   
 //Dynamic Width Elements
-document.querySelector( '.container' ).style.fontSize = yourDesiredHeight + 'px';
+// document.querySelector( '.container' ).style.fontSize = yourDesiredHeight + 'px';
+
+
+//Show Modal on Window Load
+window.addEventListener('load', () => {
+  const modal = document.querySelector('#myWelcomeModal');
+  if (modal) {
+    modal.classList.add('show');
+    modal.style.display = 'block';
+  }
+});
+
+
+
+
 
 })();
